@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --navy: #053b70;
+  --navy-dark: #032a52;
+  --navy-light: #0a4d8f;
+  --cyan: #00adef;
+  --cyan-light: #33bdf2;
+  --cyan-dark: #0090c8;
+  --gold: #c9a227;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card: #f8fafc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-navy-light: var(--navy-light);
+  --color-cyan: var(--cyan);
+  --color-cyan-light: var(--cyan-light);
+  --color-cyan-dark: var(--cyan-dark);
+  --color-gold: var(--gold);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-card: var(--card);
+  --font-sans: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: var(--cyan);
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--cyan) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-gradient {
+  background: linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #e8f4fd 40%,
+    #ffffff 100%
+  );
+}
+
+.mesh-pattern {
+  background-image: radial-gradient(circle at 1px 1px, #053b7010 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(5, 59, 112, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--cyan-dark) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--cyan-light) 0%, var(--cyan) 100%);
+  box-shadow: 0 8px 24px -4px rgba(0, 173, 239, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 2px solid var(--navy);
+  color: var(--navy);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: var(--navy);
+  color: white;
+}
+
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 6rem 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding: 7rem 2rem;
+  }
+}
