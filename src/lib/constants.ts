@@ -3,7 +3,7 @@ export const SITE_CONFIG = {
   tagline: "Technology & Digital Solutions",
   description:
     "Premium IT services for Omani businesses — custom web development, SEO, AEO, GEO, DevOps, AI automation, and digital marketing at affordable rates.",
-  url: "https://omadev.om",
+  url: "https://oma-dev.com",
   locale: "en_OM",
   email: "omadev02026@gmail.com",
   phone: "+92 331 5382111",
