@@ -45,9 +45,11 @@ This project uses [@opennextjs/cloudflare](https://opennext.js.org/cloudflare/ge
 
 | Setting | Value |
 |---------|-------|
-| Build command | `npm run build` |
-| Deploy command | `npx wrangler deploy` |
+| **Build command** | `npm run build:cf` |
+| **Deploy command** | `npx wrangler deploy` |
 | Root directory | `/` |
+
+> `build:cf` runs Next.js + OpenNext bundle (creates `.open-next/`). Do **not** use `npm run build` alone before deploy.
 
 ### Environment Variables (Cloudflare Dashboard → Settings → Variables)
 
