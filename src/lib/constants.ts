@@ -6,8 +6,8 @@ export const SITE_CONFIG = {
   url: "https://omadev.om",
   locale: "en_OM",
   email: "omadev02026@gmail.com",
-  phone: "+968 9000 0000",
-  whatsapp: "96890000000",
+  phone: "+92 331 5382111",
+  whatsapp: "923315382111",
   address: {
     street: "Muscat",
     city: "Muscat",

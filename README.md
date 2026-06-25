@@ -37,13 +37,39 @@ Open [http://localhost:3000](http://localhost:3000).
 | `GMAIL_APP_PASSWORD` | Gmail app password |
 | `CONTACT_TO_EMAIL` | Email to receive contact form submissions |
 
-## Deploy on Cloudflare Pages
+## Deploy on Cloudflare Workers
 
-1. Push this repo to GitHub
-2. Connect repo in Cloudflare Pages dashboard
-3. Build command: `npm run build`
-4. Output directory: `.next` (use `@cloudflare/next-on-pages` for full Next.js support) or deploy as static export
-5. Add environment variables in Cloudflare dashboard
+This project uses [@opennextjs/cloudflare](https://opennext.js.org/cloudflare/get-started).
+
+### Cloudflare Dashboard Settings
+
+| Setting | Value |
+|---------|-------|
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+| Root directory | `/` |
+
+### Environment Variables (Cloudflare Dashboard → Settings → Variables)
+
+Add these as **encrypted** variables:
+
+| Variable | Value |
+|----------|-------|
+| `GMAIL_USER` | `omadev02026@gmail.com` |
+| `GMAIL_APP_PASSWORD` | Your Gmail app password |
+| `CONTACT_TO_EMAIL` | `omadev02026@gmail.com` |
+
+### Local Cloudflare preview
+
+```bash
+npm run preview
+```
+
+### Deploy from CLI
+
+```bash
+npm run deploy
+```
 
 ## License
 
